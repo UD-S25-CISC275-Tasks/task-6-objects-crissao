@@ -83,7 +83,8 @@ ${body}${options}`;
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    return question;
+    const new_question = {...question, name: newName}
+    return new_question;
 }
 
 /**
@@ -92,7 +93,8 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    return question;
+    const new_question = { ...question, published: !question.published};
+    return new_question;
 }
 
 /**
@@ -102,7 +104,8 @@ export function publishQuestion(question: Question): Question {
  * The `published` field should be reset to false.
  */
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
-    return oldQuestion;
+    const new_question = { ...question, published: !question.published };
+    return new_question;
 }
 
 /**
